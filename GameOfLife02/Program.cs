@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace GameOfLife02
 {
-    class Program
+    class Game
     {
         public static int width { get; set; }
         public static int height { get; set; }
@@ -51,11 +51,13 @@ namespace GameOfLife02
             iterations = 0;
             while (true)  
             {
+                Console.Clear();
                 iterations++;
                 Draw(field);
                 field = RunIteration(field);
-                System.Threading.Thread.Sleep(1);
+                System.Threading.Thread.Sleep(100);
                 Console.WriteLine("i= " + iterations);
+
             }
             
 
